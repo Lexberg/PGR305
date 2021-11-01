@@ -11,6 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Microsoft.Extensions.Options;
+using TvHeaven.Models;
+using TvHeaven.Services;
 
 namespace TvHeaven
 {
@@ -26,6 +29,15 @@ namespace TvHeaven
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+             services.Configure<SerieDatabaseSettings>(
+                Configuration.GetSection(nameof(SerieDatabaseSettings))
+            );
+
+            services.AddSingleton<ISerieDatabaseSettings>(
+                sp => sp.GetRequiredService<IOptions<SerieDatabaseSettings>>().Value
+            );
+
+            services.AddSingleton<SerieService>(); // husk using MovieApi.Services;
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

@@ -1,13 +1,13 @@
-using TvHeaven.Interfaces;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace TvHeaven.Models 
 {
-    public class Serie : ISerie {
-        public int Id { get; init; }
+    public class Serie 
+    {
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; }    
         public string Title { get; set; }
-        public string Category { get; set; }
-        public double year { get; set; }
-
-
     }
 }

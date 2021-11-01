@@ -25,3 +25,12 @@
 /Users/martinandrelexberg/Desktop/TvHeaven/obj/Debug/net5.0/ref/TvHeaven.dll
 /Users/martinandrelexberg/Desktop/TvHeaven/obj/Debug/net5.0/TvHeaven.pdb
 /Users/martinandrelexberg/Desktop/TvHeaven/obj/Debug/net5.0/TvHeaven.genruntimeconfig.cache
+/Users/martinandrelexberg/Desktop/TvHeaven/bin/Debug/net5.0/DnsClient.dll
+/Users/martinandrelexberg/Desktop/TvHeaven/bin/Debug/net5.0/MongoDB.Bson.dll
+/Users/martinandrelexberg/Desktop/TvHeaven/bin/Debug/net5.0/MongoDB.Driver.dll
+/Users/martinandrelexberg/Desktop/TvHeaven/bin/Debug/net5.0/MongoDB.Driver.Core.dll
+/Users/martinandrelexberg/Desktop/TvHeaven/bin/Debug/net5.0/MongoDB.Libmongocrypt.dll
+/Users/martinandrelexberg/Desktop/TvHeaven/bin/Debug/net5.0/SharpCompress.dll
+/Users/martinandrelexberg/Desktop/TvHeaven/bin/Debug/net5.0/runtimes/win/native/libzstd.dll
+/Users/martinandrelexberg/Desktop/TvHeaven/bin/Debug/net5.0/runtimes/win/native/snappy32.dll
+/Users/martinandrelexberg/Desktop/TvHeaven/bin/Debug/net5.0/runtimes/win/native/snappy64.dll
