@@ -4976,11 +4976,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/martinandrelexberg/Desktop/TvHeaven/TvHeaven.csproj",
+      "projectUniqueName": "/Users/martinandrelexberg/Desktop/eksamenPGR305/TvHeaven/TvHeaven.csproj",
       "projectName": "TvHeaven",
-      "projectPath": "/Users/martinandrelexberg/Desktop/TvHeaven/TvHeaven.csproj",
+      "projectPath": "/Users/martinandrelexberg/Desktop/eksamenPGR305/TvHeaven/TvHeaven.csproj",
       "packagesPath": "/Users/martinandrelexberg/.nuget/packages/",
-      "outputPath": "/Users/martinandrelexberg/Desktop/TvHeaven/obj/",
+      "outputPath": "/Users/martinandrelexberg/Desktop/eksamenPGR305/TvHeaven/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/martinandrelexberg/.nuget/NuGet/NuGet.Config"

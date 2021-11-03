@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "I6rHRLPaYMpdkAJqYEq92C+Wt8+s276ZkOGe/DnQ4d/0OqgpAHXoB2nxIImvYTR0HyOZjuMckusKLTvMJIxt8w==",
+  "dgSpecHash": "EYgiDgUDfJvB2zTDJkG4jmgyym0/NGZWtEW45srqDjKTZhxYQJmBSGmxhs7br5sn8K6X7N1PBBtQ6qMDlRsoRg==",
   "success": true,
-  "projectFilePath": "/Users/martinandrelexberg/Desktop/TvHeaven/TvHeaven.csproj",
+  "projectFilePath": "/Users/martinandrelexberg/Desktop/eksamenPGR305/TvHeaven/TvHeaven.csproj",
   "expectedPackageFiles": [
     "/Users/martinandrelexberg/.nuget/packages/dnsclient/1.3.1/dnsclient.1.3.1.nupkg.sha512",
     "/Users/martinandrelexberg/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
