@@ -22,6 +22,12 @@ namespace TvHeaven.Services
             return _series.Find( serie => true ).ToList();
         }
 
+        public Serie PostSerie(Serie newSerie)
+        {
+             _series.InsertOne( newSerie );
+             return newSerie;
+        }
+
     }
 
 }

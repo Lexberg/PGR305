@@ -21,6 +21,14 @@ namespace TvHeaven.Controllers
         public IEnumerable<Serie> Get()
         {
             return _serieService.Get();    
-        }        
+        } 
+
+        [HttpPost]
+
+        public Serie PostSerie(Serie newSerie)
+        {
+             _serieService.PostSerie(newSerie);
+             return newSerie;
+        }       
     }
 }

@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+
 using Microsoft.Extensions.Options;
 using TvHeaven.Models;
 using TvHeaven.Services;
@@ -29,7 +30,14 @@ namespace TvHeaven
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-             services.Configure<SerieDatabaseSettings>(
+
+            services.AddControllers();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "TvHeaven", Version = "v1" });
+            });
+
+            services.Configure<SerieDatabaseSettings>(
                 Configuration.GetSection(nameof(SerieDatabaseSettings))
             );
 
@@ -37,13 +45,18 @@ namespace TvHeaven
                 sp => sp.GetRequiredService<IOptions<SerieDatabaseSettings>>().Value
             );
 
-            services.AddSingleton<SerieService>(); // husk using MovieApi.Services;
+            services.AddSingleton<SerieService>();
 
-            services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "TvHeaven", Version = "v1" });
-            });
+            services.AddCors(
+                options => {
+                    options.AddPolicy("AllowAny", 
+                        builder => builder
+                            .AllowAnyOrigin()
+                            .AllowAnyHeader()
+                            .AllowAnyMethod()
+                    );
+                }
+            );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,6 +68,16 @@ namespace TvHeaven
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TvHeaven v1"));
             }
+
+            // Todo: legge til DefaultFilesOptions, UseDefaultFiles, UseStaticFiles
+
+            DefaultFilesOptions newOptions = new DefaultFilesOptions();
+            newOptions.DefaultFileNames.Append("index.html");
+            app.UseDefaultFiles(newOptions);
+
+            app.UseStaticFiles();
+
+            app.UseCors("AllowAny");
 
             app.UseHttpsRedirection();
 
